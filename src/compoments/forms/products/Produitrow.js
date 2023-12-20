@@ -7,9 +7,10 @@
 
 function Produitrow({product}){
     const style= product.stocked? undefined : {color:'red'}
+    const style2= (product.price > 5)? undefined : {color:'blue'}
     return <tr>
         <td style={style}>{product.name}</td>
-        <td>{product.price}</td>
+        <td style={style2}>{product.price}</td>
     </tr>
 }
 
